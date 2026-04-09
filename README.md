@@ -5,6 +5,8 @@ Given a parent directory containing one or more analysed run folders, the script
 
 This repository contains the python script `aviti_run_summariser.py`, explanations of parsed data and their source files, and guidance on running the script. 
 
+> The long-term goal of this script is to automatically execute on a weekly(?) basis, appending any new AVITI runs (since the last time the script was executed) to the output summary TSV files.
+
 ---
 
 ## Requirements
