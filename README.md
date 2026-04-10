@@ -38,7 +38,7 @@ The input directory should contain one or more AVITI run subdirectories, each pr
 | `RunParameters_Date` | `RunParameters.json` | ISO 8601 timestamp of when the run started on the instrument. |
 | `RunParameters_InstrumentName` | `RunParameters.json` | The instrument identifier (e.g. `AV251604`). |
 | `RunParameters_RunDescription` | `RunParameters.json` | Free-text description entered at run setup. |
-| `NumSamplesFound` | Derived | Count of `*_stats.json` files found under `Samples/` for this run. A sanity check that the expected number of samples were demultiplexed. |
+| `NumSamplesFound` | Derived | Count of `*_stats.json` files found under `Samples/` for this run. As such, this number represents all samples, and does not take into account replicates across lanes (e.g., if 48 samples were run on lane 1 and the same 48 on lane 2, NumSamplesFound == 96) |
 | `RunParameters_ThroughputSelection` | `RunParameters.json` | `High` or `Standard`. Determines the target polony density on the flow cell. |
 | `RunParameters_KitConfiguration` | `RunParameters.json` | The sequencing kit used, expressed as total available cycles (e.g. `150Cycles`, `300Cycles`). Constrains the maximum combined read length (R1+R2+I1+I2). |
 | `RunParameters_PreparationWorkflow` | `RunParameters.json` | Library prep origin. `ThirdParty` = non-Element kits & conversion kits used. |
